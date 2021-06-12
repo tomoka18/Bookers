@@ -27,13 +27,13 @@
    <span><%= book.body %></span>
 </div>
 <div class="date3">
- <p><%= link_to 'show', book_path(book.id) %></p>
+ <p><%= link_to 'Show', book_path(book.id) , class:"black" %></p>
  </div>
  <div class="date4">
-   <%= link_to "Edit", edit_book_path(book.id) %>
+ <p><%= link_to "Edit", edit_book_path(book.id) , class:"black" %></p>
  </div>
 <div class="date5">
- <%= link_to "Destroy", book_path(book.id), method: :delete %>
+ <p><%= link_to "Destroy", book_path(book.id), method: :delete , class:"black" %></p>
 </div>
  </div>
 

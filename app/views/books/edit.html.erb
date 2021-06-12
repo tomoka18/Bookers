@@ -4,7 +4,13 @@
   <%= f.text_field :title %>
   <h4>Body</h4>
   <%= f.text_area :body %>
-  <%= f.submit 'Update Book' %>
-  <%= link_to 'back', books_index_path %>
+
+<div class=box><%= f.submit 'Update Book' %></div>
+
+<div class=links>
+<div><%= link_to 'Show', book_path(@book) , class:"black" %></div>
+<div class=center>|</div>
+<div><%= link_to 'Back', books_index_path , class:"black" %></div>
+</div>
 
 <% end %>
