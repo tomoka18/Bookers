@@ -66,14 +66,53 @@ label {
 
 th {
   display: table-cell;
+  width: 100%;
   font-weight: bold;
 }
 
 .table {
-  display: table;
+  display: table
 }
 
-.date {
-  display: flex;
-  flex-direction: column;
+.table1 {
+  display: table
+}
+
+.title1 {
+  display: table-cell;
+  text-align:  center;
+  width: 100px;
+}
+
+.title2{
+ display: table-cell;
+ text-align:  center;
+ width: 200px;
+}
+
+
+.date1 {
+  display: table-cell;
+  width: 20%;
+  height: 15px;
+}
+
+.date2 {
+  display: table-cell;
+  width: 50%;
+}
+
+.date3 {
+  display: table-cell;
+  width: 10%;
+}
+
+.date4 {
+  display: table-cell;
+  width: 10%;
+}
+
+.date5 {
+  display: table-cell;
+  width: 10%;
 }

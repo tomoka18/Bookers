@@ -2,23 +2,42 @@
 
 <h1>Books</h1>
 
-<div class="table">
+<div class="table1">
+ <div class="title1">
+ <th>title<th>
+ </div>
+
+ <div class="title2">
+<th>Body<th>
+ <th></th>
+ </div>
+</div>
+
+
 
 <% @books.each do |book| %>
 
-<div class="date">
- <th>title<th>
- <span><%= book.title %></span>
+
+<div class="table">
+
+ <div class="date1">
+  <span><%= book.title %></span>
+ </div>
+<div class="date2">
+   <span><%= book.body %></span>
+</div>
+<div class="date3">
+ <p><%= link_to 'show', book_path(book.id) %></p>
+ </div>
+ <div class="date4">
+   <%= link_to "Edit", edit_book_path(book.id) %>
+ </div>
+<div class="date5">
+ <%= link_to "Destroy", book_path(book.id), method: :delete %>
+</div>
  </div>
 
-<div class="date">
-<th>Body<th>
- <span><%= book.body %></span>
- </div>
 
- <span>
-   <%= link_to show, "/books/#{book.id}" %>
- </span>
 
  </div>
 
