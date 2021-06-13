@@ -2,50 +2,44 @@
 
 <h1>Books</h1>
 
-<div class="table1">
- <div class="title1">
- <th>title<th>
- </div>
-
- <div class="title2">
-<th>Body<th>
- <th></th>
- </div>
-</div>
-
+<div>
+<table>
+ <tr>
+ <th class="data1">title</th>
+ <th class="date2">Body</th>
+ <th class="date3">&nbsp;</th>
+ <th class="date4">&nbsp;</th>
+ <th class="date5">&nbsp;</th>
+ </tr>
 
 
 <% @books.each do |book| %>
-
-
-<div class="table">
-
- <div class="date1">
-  <span><%= book.title %></span>
- </div>
-<div class="date2">
-   <span><%= book.body %></span>
-</div>
-<div class="date3">
- <p><%= link_to 'Show', book_path(book.id) , class:"black" %></p>
- </div>
- <div class="date4">
- <p><%= link_to "Edit", edit_book_path(book.id) , class:"black" %></p>
- </div>
-<div class="date5">
- <p><%= link_to "Destroy", book_path(book.id), method: :delete , class:"black" %></p>
-</div>
- </div>
-
-
-
- </div>
-
+<tr>
+ <td><%= book.title %></td>
+ <td><%= book.body %></td>
+ <td><%= link_to 'Show', book_path(book.id) , class:"black" %></td>
+ <td><%= link_to "Edit", edit_book_path(book.id) , class:"black" %></td>
+ <td><%= link_to "Destroy", book_path(book.id), method: :delete , data: {confirm: "Are you sure?"} , class:"black" %></td>
+</tr>
  <% end %>
+
+</table>
+
+</div>
+
+
+
 
 
 <div>
 <h2>New book</h2>
+
+<% if @book.errors.any? %>
+  <%= @book.errors.count %>errors occurred.
+  <% @book.errors.full_messages.each do |message| %>
+    <%= message %>
+  <% end %>
+<% end %>
 
 <%= form_with model: @book, url:'/books', local:true do |f| %>
 

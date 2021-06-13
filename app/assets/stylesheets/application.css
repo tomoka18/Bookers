@@ -66,29 +66,17 @@ label {
 
 th {
   display: table-cell;
-  width: 100%;
   font-weight: bold;
 }
 
-.table {
+
+
+table {
   display: table
+  width: 80%;
 }
 
-.table1 {
-  display: table
-}
 
-.title1 {
-  display: table-cell;
-  text-align:  center;
-  width: 100px;
-}
-
-.title2{
- display: table-cell;
- text-align:  center;
- width: 200px;
-}
 
 
 .date1 {
